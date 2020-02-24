@@ -63,9 +63,7 @@ stages:
     - publish: '$(Build.ArtifactStagingDirectory)'
       artifact: drop
 
-- stage: 'Deploy'git add azure-pipelines.yml
-git commit -m "Add a deployment stage to the pipeline"
-git push origin release-pipeline
+- stage: 'Deploy'
   displayName: 'Deploy the web application'
   dependsOn: Build
   jobs:
